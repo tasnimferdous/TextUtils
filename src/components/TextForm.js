@@ -10,6 +10,17 @@ export default function TextForm(props) {
         let newText = text.toLowerCase();
         setText(newText);
     };
+    
+    // const handleCapitalClick = () => {
+    //     let newText = text.split(' ');
+    //     newText.forEach((word) => {
+    //         word = word[0].toUpperCase() + word.slice(1);
+    //         console.log(word);
+    //     });
+
+    //     newText.join(' ');
+    //     setText(newText);
+    // };
 
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -24,6 +35,7 @@ export default function TextForm(props) {
                 <textarea className="form-control" value={text} onChange={handleOnChange} id="textbox" rows="8"></textarea>
                 <button className="btn btn-primary my-3 mx-1" onClick={handleUpClick}>Uppercase</button>
                 <button className="btn btn-primary my-3 mx-1" onClick={handleLoClick}>Lowercase</button>
+                {/* <button className="btn btn-primary my-3 mx-1" onClick={handleCapitalClick}>Capitalized</button> */}
             </div>
 
             <h2 className="preview my-2">Your Text Summery</h2>
